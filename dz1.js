@@ -103,3 +103,25 @@ alert(seven(times(five()))); // must return 35
 alert(four(plus(nine()))); // must return 13
 alert(eight(minus(three()))); // must return 5
 alert(six(dividedBy(two()))); // must return 3
+
+//Первая задача из дз
+function compose(...funcs) {
+    return (x) => {
+        f = x;
+        for (let i = funcs.length - 1; i >= 0; i--){
+            f = funcs[i](f)
+        }
+        return f;
+    }
+}
+function a(f) {
+    return f + 1;
+}
+function b(f) {
+    return f + 2;
+}
+function c(f) {
+    return f;
+}
+g = compose(a, b, c);
+//alert(g(1))

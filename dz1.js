@@ -104,6 +104,8 @@ alert(four(plus(nine()))); // must return 13
 alert(eight(minus(three()))); // must return 5
 alert(six(dividedBy(two()))); // must return 3
 
+
+
 //Первая задача из дз
 function compose(...funcs) {
     return (x) => {
